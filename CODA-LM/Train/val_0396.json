@@ -1,0 +1,99 @@
+{
+    "general_perception": {
+        "vehicles": [
+            {
+                "description": "A line of vehicles is parked on the right side of the ego car, parallel to the curb.",
+                "explanation": "These parked vehicles reduce the available driving lane width and require the ego car to stay more towards the center of the road."
+            }
+        ],
+        "vulnerable_road_users": [
+            {
+                "description": "A pedestrian is crossing the street directly in front of the ego car from right to left.",
+                "explanation": "The pedestrian has the potential to obstruct the path of the ego car, necessitating a stop or slow down to ensure their safety."
+            },
+            {
+                "description": "A person is pushing a stroller along the crosswalk to the left of the ego car.",
+                "explanation": "Like the other pedestrian, the individual with the stroller is also on the path of the ego car and poses a similar need for the vehicle to yield."
+            }
+        ],
+        "traffic signs": [],
+        "traffic lights": [
+            {
+                "description": "Traffic lights are present above the intersection, but their signal status is not visible.",
+                "explanation": "Assuming the traffic light is functioning, the ego car will need to observe the light's status to obey traffic signals and ensure safety."
+            }
+        ],
+        "traffic cones": [],
+        "barriers": [
+            {
+                "description": "There are a series of orange and white traffic cones aligning the edge of the walkway on the left side of the road.",
+                "explanation": "These cones indicate a boundary that could be there for ongoing work or preventing access, guiding vehicles to stay clear of that area."
+            }
+        ],
+        "other objects": [],
+        "description and explanation": "In the image, there is a line of vehicles parked on the right side of the ego car, parallel to the curb. The presence of these vehicles reduces the width of the drivable lane, requiring the ego car to maintain its position more towards the center of the road to navigate safely. On the road, there is a pedestrian crossing directly in front of the ego car from right to left, necessitating the vehicle to either stop or slow down to ensure the pedestrian's safety. Additionally, there is a person pushing a stroller across the crosswalk to the left of the ego car. This individual and the stroller also represent a potential obstruction to the ego car's path, posing a similar need for the vehicle to yield to ensure safe passage.\n\nTraffic lights are installed above the intersection; however, the signal status is unspecified. Because of this, the ego car will have to observe the current status of the traffic lights to comply with the traffic signals once they are visible and to maintain safety at the intersection.\n\nFurthermore, there are orange and white traffic cones strategically placed along the edge of the walkway on the left side of the street. These cones are likely there to indicate a boundary for either ongoing work or to prevent access, signaling to vehicles the need to keep away from that particular area to avoid potential hazards or interference with designated activities."
+    },
+    "region_perception": {
+        "1": {
+            "description and explanation": "This is a traffic cone, typically used for marking temporary traffic lanes or areas of construction. It is important for indicating adjustments in traffic flow or alerting drivers to potential hazards. In this scenario, the presence of the cone suggests that drivers, including the ego car, may need to slow down or change lanes to avoid the marked area, ensuring safety around the marked zone.",
+            "box": [
+                447,
+                433,
+                24,
+                42
+            ],
+            "category_name": "traffic_cone"
+        },
+        "2": {
+            "description and explanation": "This object is a bollard, which serves to control or direct road traffic. Bollards are often used to segregate pedestrian areas from vehicular zones, or to protect sensitive areas. For the ego car, this bollard indicates the limits of the driving path and necessitates careful maneuvering to avoid encroaching on designated pedestrian spaces.",
+            "box": [
+                222,
+                440,
+                15,
+                50
+            ],
+            "category_name": "bollard"
+        },
+        "3": {
+            "description and explanation": "This is a stroller, typically used to transport a small child. The visibility of a stroller in a traffic area heightens the need for heightened caution and reduced speed from drivers, including those in the ego car, to ensure the safety of pedestrians, particularly the very young and vulnerable.",
+            "box": [
+                108,
+                436,
+                80,
+                104
+            ],
+            "category_name": "stroller"
+        },
+        "4": {
+            "description and explanation": "This depicts a bus, a large vehicle designed for transporting multiple passengers along designated routes. The presence of a bus in traffic influences the ego car's driving patterns, possibly requiring the driver to maintain a safe following distance and prepare for potential stops or slow movement as the bus picks up or drops off passengers.",
+            "box": [
+                988,
+                375,
+                95,
+                44
+            ],
+            "category_name": "bus"
+        },
+        "5": {
+            "description and explanation": "This object is a traffic cone, commonly used to signal temporary traffic changes, construction zones, or mark hazards. Its bright color and recognizable shape are designed to capture the attention of drivers, indicating that they should proceed with caution and possibly avoid a specific area of the road. In the driving scenario, the presence of the traffic cone suggests that there might be roadwork ahead or a need to reduce speed and be alert for potential obstructions or deviations from the normal path.",
+            "box": [
+                469,
+                433,
+                25,
+                39
+            ],
+            "category_name": "traffic_cone"
+        },
+        "6": {
+            "description and explanation": "This object is a bollard, a short vertical post typically used to control or direct road traffic. It acts as a protective barrier and can be used to separate pedestrian areas from vehicles, regulate parking, or prevent vehicular access to certain areas. Seeing a bollard in the driving scenario would mean that the driver should not cross into areas where the bollards are placed, as they define boundaries which are not intended for vehicular traffic, thus ensuring pedestrian safety and traffic organization.",
+            "box": [
+                315,
+                437,
+                14,
+                49
+            ],
+            "category_name": "bollard"
+        }
+    },
+    "driving_suggestion": "Given the situation, the ego car should come to a complete stop if not already stopped, allowing the pedestrians to safely cross the street. Also, the ego car should monitor the traffic light to make sure they obey the signal when it is time to proceed. Caution should be exercised to look out for any other road users hidden by the parked vehicles or those approaching the crosswalk area. The ego car should not attempt to pass the parked vehicles closely due to the reduced lane width and the proximity of the pedestrian crossing. Safety is the priority, so all movements should be made once the pedestrians are clear, and it is legal to proceed."
+}

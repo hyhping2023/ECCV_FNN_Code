@@ -1,0 +1,80 @@
+{
+    "general_perception": {
+        "vehicles": [
+            {
+                "description": "A white car is driving in the rightmost lane to the left of the ego car, slightly ahead",
+                "explanation": "This vehicle may intend to change lanes or continue straight, which could influence the ego vehicle's decision to maintain speed, change lanes or overtake."
+            },
+            {
+                "description": "Several vehicles are visible in the opposite lanes, moving in the opposite direction",
+                "explanation": "These vehicles are separated by a median and do not directly influence the immediate driving decisions of the ego car."
+            },
+            {
+                "description": "A dark car is driving in the leftmost lane opposite the median, in the same direction as the ego car",
+                "explanation": "The ego car should monitor this vehicle for potential lane changes or speed adjustments."
+            }
+        ],
+        "vulnerable_road_users": [],
+        "traffic signs": [
+            {
+                "description": "A no-parking sign is visible to the left of the road, near other traffic signs",
+                "explanation": "This indicates that no parking is allowed alongside this section of the roadway, but it has no immediate impact on the driving behavior of the ego car as it is not a parking situation."
+            },
+            {
+                "description": "Directional traffic signs are installed over the lanes indicating the direction of traffic and turns",
+                "explanation": "These signs help the ego car determine which lane is appropriate for its intended destination and movements."
+            },
+            {
+                "description": "A blue traffic sign with a bicycle symbol is seen to the right, suggesting a bike lane or shared path",
+                "explanation": "The ego car should be cautious and look out for cyclists around that area."
+            }
+        ],
+        "traffic lights": [
+            {
+                "description": "Red traffic lights are visible for the lanes going straight, hanging over the intersection",
+                "explanation": "This requires the ego car to stop at the intersection if it's intending to drive straight."
+            },
+            {
+                "description": "A green right turn arrow is visible over the lanes that are turning right",
+                "explanation": "If the ego car is turning right, it may proceed with caution."
+            }
+        ],
+        "traffic cones": [
+            {
+                "description": "Orange and white traffic cones are placed to the right side of the road, indicating some form of road work or lane closure",
+                "explanation": "This warns the ego car to not enter the space next to the cones and possibly to be prepared for narrowed lanes or workers on the road."
+            }
+        ],
+        "barriers": [
+            {
+                "description": "There's a median barrier separating opposite lanes of traffic",
+                "explanation": "It ensures the ego car remains in the correct lanes and does not cross into oncoming traffic."
+            }
+        ],
+        "other objects": [],
+        "description and explanation": "In the scene, there is a white car driving slightly ahead in the lane to the left of the ego vehicle, potentially affecting whether the ego vehicle decides to maintain its speed, change lanes, or overtake. Additionally, numerous vehicles are present in the opposite lanes, moving in the reverse direction, but they are separated by a median and do not impact the ego car's immediate driving decisions. There is also a dark car in the leftmost lane on the same side as the median, which the ego car needs to monitor in case it changes lanes or adjusts speed.\n\nAs for signage, a no-parking sign on the left side of the road indicates parking restrictions, but since it's not a parking scenario, it does not influence the ego vehicle's immediate driving behavior. Directional signs above the lanes help the ego vehicle determine the correct lane for its destination. There is a blue sign with a bicycle symbol on the right, signaling the presence of a bike lane or shared path, which means the ego vehicle must be vigilant for any cyclists.\n\nRegarding traffic signals, the red lights hanging over the intersection require the ego car to stop if it intends to continue straight. However, a green arrow allows vehicles to turn right with caution.\n\nOn the roadside, orange and white traffic cones suggest road work or lane closures, signaling to the ego car to avoid the coned-off area and be ready for potential lane narrowing or nearby workers. Lastly, a median barrier prevents traffic from crossing into the opposing lanes, ensuring the ego car stays on the correct side.\n\nThere are no vulnerable road users, traffic cones, or other objects affecting the driving behavior of the ego car in this image."
+    },
+    "region_perception": {
+        "1": {
+            "description and explanation": "This is a vertical traffic signal with a red light illuminated, indicating that vehicles in the lane where the signal is located should stop and not proceed through the intersection.",
+            "box": [
+                416,
+                421,
+                35,
+                53
+            ],
+            "category_name": "barrier"
+        },
+        "2": {
+            "description and explanation": "This is a bus on the roadway. Its presence may indicate the possibility of frequent stops or slower traffic flow, and the driver of the ego car should maintain a safe distance and be prepared for potential stops or reduced speed.",
+            "box": [
+                159,
+                330,
+                49,
+                42
+            ],
+            "category_name": "bus"
+        }
+    },
+    "driving_suggestion": "Given the visible traffic lights showing red for going straight, the ego car should prepare to stop at the intersection unless it is planning to turn right, in which case it can proceed with caution due to the green right turn arrow. The ego car should maintain its lane, monitoring the white car on the right for any lane changes and be mindful of the possible presence of cyclists near the bike lane sign. It should also keep a safe distance from the traffic cones to the right."
+}

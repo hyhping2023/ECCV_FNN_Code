@@ -1,0 +1,83 @@
+{
+    "general_perception": {
+        "vehicles": [
+            {
+                "description": "A blue car is turning right onto the adjacent road from the ego car's lane.",
+                "explanation": "This vehicle is affecting traffic flow and may obstruct the ego car's path if it decides to continue straight or turn right."
+            }
+        ],
+        "vulnerable_road_users": [
+            {
+                "description": "Three pedestrians, including one child riding a bicycle, are crossing the road at a designated crosswalk directly ahead of the ego car.",
+                "explanation": "The ego car must yield to them as they have the right of way while crossing at the crosswalk."
+            },
+            {
+                "description": "One individual appears to be waiting to cross the street, located on the right side of the crosswalk the ego car is approaching.",
+                "explanation": "The ego car should monitor this pedestrian as they may enter the crosswalk, requiring the car to stop."
+            }
+        ],
+        "traffic signs": [
+            {
+                "description": "Directional signs overhead indicate lanes for Biwen Rd. And Binkang Rd.",
+                "explanation": "Ego car should follow these signs to navigate to the desired destination."
+            },
+            {
+                "description": "A 'No entry' sign is located on the roadside barrier to the left of the ego car.",
+                "explanation": "This sign indicates that traffic is not permitted to enter the lane where the sign is facing, which may not be immediately relevant to the ego car unless a lane change to the left is intended."
+            }
+        ],
+        "traffic lights": [
+            {
+                "description": "Traffic lights can be seen in the distance, but their current state is unclear from this perspective.",
+                "explanation": "The ego car should approach with caution and be prepared to stop or proceed according to the visible indication when closer."
+            }
+        ],
+        "traffic cones": [
+            {
+                "description": "Orange traffic cones are located to the left of the ego vehicle separating the lanes of traffic.",
+                "explanation": "These cones guide the traffic flow and indicate areas that may be closed off or restricted from access."
+            }
+        ],
+        "barriers": [
+            {
+                "description": "Roadside barriers are on the left side of the scene with attached 'No entry' signs",
+                "explanation": "These barriers are likely indicating a closed or restricted lane and must be heeded by the ego car."
+            }
+        ],
+        "other objects": [],
+        "description and explanation": "In the observed traffic scene, a variety of road users and objects are present, influencing the behavior of the autonomous ego car.\n\nStarting with vehicles, there is a blue car executing a right turn onto a road adjacent to the ego car's lane. This maneuver affects the traffic flow, potentially obstructing the ego car's intended path should it wish to continue straight or take the same right turn.\n\nIn terms of vulnerable road users, there are a few noteworthy observations. Firstly, three pedestrians, including a child on a bicycle, are utilizing the crosswalk directly in the path of the ego car. The ego car is mandated to yield to them as they rightfully have precedence in the crosswalk. Additionally, another individual is spotted waiting to cross the street, situated on the right side of the approaching crosswalk. The ego car must remain vigilant towards this person as they might enter the crosswalk, necessitating the car to halt.\n\nConcerning traffic signs, two specific instances are noted. Overhead directional signs are seen, pointing out lanes leading to Biwen Rd. and Binkang Rd., essential for the ego car's navigation towards its destination. Also observed is a 'No entry' sign affixed to a roadside barrier on the left, indicating a prohibition against entering the lane directly opposite the sign. This is crucial for the ego car to note, especially if considering a lane change to the left.\n\nRegarding traffic lights, their presence is confirmed in the distance, though their current state remains uncertain from this viewpoint. As a result, the ego car is advised to approach with caution, ready to comply with the signal once its status becomes evidently clear.\n\nOrange traffic cones noted on the left of the ego vehicle serve to demarcate lanes and signal areas off-limits or with restricted access, ensuring smooth traffic flow and safety.\n\nLastly, roadside barriers are positioned on the left side of the scene, equipped with 'No entry' signs. These barriers serve as a signal of a closed or restricted lane that the ego car must acknowledge and respond to accordingly.\n\nThe scene lacks any other objects of notable impact or relevance to the driving conditions for the ego car."
+    },
+    "region_perception": {
+        "1": {
+            "description and explanation": "A bollard is a sturdy, short vertical post. The primary function of bollards is to control road traffic, for instance by preventing vehicles from driving through a certain area, directing vehicles into certain patterns, or protecting pedestrian areas. For an ego vehicle, noticing a bollard indicates that there are restrictions on where it can drive, suggesting a need to either slow down or divert its path according to the designated traffic routes.",
+            "box": [
+                239,
+                439,
+                24,
+                77
+            ],
+            "category_name": "bollard"
+        },
+        "2": {
+            "description and explanation": "A traffic sign displaying a no entry symbol for vehicles and a directional arrow indicating a detour to the right. This sign informs drivers that access to the road ahead is prohibited and that they must follow an alternative route to the right. The ego vehicle must obey this sign by not proceeding straight ahead in the direction of the no entry symbol and instead preparing to make a right turn to follow the detour indicated.",
+            "box": [
+                197,
+                336,
+                128,
+                145
+            ],
+            "category_name": "traffic_sign"
+        },
+        "3": {
+            "description and explanation": "The object is a traffic bollard, a post designed to guide traffic by demarcating certain areas of the road intended to be kept clear of vehicles. This could signal a dividing point on the road, a pedestrian area, or an entry restriction. The ego car must maintain a safe distance from this bollard and should not attempt to drive over or close to the area it is protecting.",
+            "box": [
+                294,
+                433,
+                22,
+                69
+            ],
+            "category_name": "bollard"
+        }
+    },
+    "driving_suggestion": "The ego car should slow down and prepare to stop to allow the pedestrians to complete crossing at the crosswalk. It should also monitor the movement of the waiting pedestrian to act accordingly. Depending on the blue car's actions, it may need to adjust its own path. The driver should also be prepared for the traffic light ahead and obey the lane directions indicated by the overhead signs."
+}

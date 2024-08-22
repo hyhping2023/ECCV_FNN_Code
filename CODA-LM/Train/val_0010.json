@@ -1,0 +1,87 @@
+{
+    "general_perception": {
+        "vehicles": [
+            {
+                "description": "A dark-colored vehicle is parked on the right side of the road, facing the ego vehicle.",
+                "explanation": "This vehicle is stationary but occupies part of the lane, which might reduce the drivable space available to the ego vehicle."
+            },
+            {
+                "description": "A line of vehicles is parked on the right side further down the road.",
+                "explanation": "These vehicles define the right boundary of the drivable area, and the ego vehicle must stay to the left of them to maintain safe passage."
+            }
+        ],
+        "vulnerable_road_users": [
+            {
+                "description": "A cyclist is on the road ahead, moving in the same direction as the traffic.",
+                "explanation": "The cyclist shares the road with vehicles and may affect the flow of traffic, making it necessary for the ego vehicle to account for their movement and ensure safe passing distance."
+            },
+            {
+                "description": "Pedestrians are crossing the road on the marked crosswalk ahead.",
+                "explanation": "Their presence means vehicles, including the ego vehicle, must yield until the crosswalk is clear."
+            },
+            {
+                "description": "A pedestrian is visible on the sidewalk to the right.",
+                "explanation": "While they are not on the road, awareness of pedestrians is crucial as there is potential for them to enter the road suddenly."
+            }
+        ],
+        "traffic signs": [
+            {
+                "description": "A pedestrian crossing sign is visible to the right of the road ahead.",
+                "explanation": "This sign indicates the presence of a crosswalk, alerting the ego vehicle to watch for and yield to pedestrians."
+            }
+        ],
+        "traffic lights": [],
+        "traffic cones": [
+            {
+                "description": "Traffic cones are placed in a line on the right side of the rightmost lane, spanning the approach to the intersection.",
+                "explanation": "These indicate potential road work or hazards and suggest that vehicles should not drive in the lane next to the cones."
+            }
+        ],
+        "barriers": [],
+        "other objects": [],
+        "description and explanation": "In the traffic image, there is a dark-colored vehicle parked on the right side of the road, facing towards the ego vehicle. The position of this stationary vehicle may reduce the available driving space for the ego vehicle. Additionally, further down the road, a line of parked vehicles on the right indicates the boundary of the drivable area, requiring the ego vehicle to navigate to the left of these vehicles for safe travel.\n\nThere is a cyclist on the road ahead, moving in the same direction as the traffic. This requires the ego vehicle to monitor their movement and maintain a safe distance for passing. Furthermore, pedestrians are seen crossing the road at the marked crosswalk ahead, meaning vehicles, including the ego vehicle, must yield until the crosswalk is clear of pedestrians. Another pedestrian is spotted on the sidewalk to the right, necessitating remain alert for any unexpected road entry.\n\nA pedestrian crossing sign visible to the right of the road serves as a warning for drivers, including the ego vehicle, to watch for pedestrians and yield the right of way.\n\nTraffic cones are noticed, arranged in a line along the right side of the rightmost lane approaching the intersection, pointing towards potential road work or hazards, and implying that vehicles should keep clear of the lane adjacent to the cones.\n\nNo traffic lights, barriers, or other objects are present in the traffic image that would affect driving behavior."
+    },
+    "region_perception": {
+        "1": {
+            "description and explanation": "An orange traffic cone, typically used to signal caution on the road. Drivers should be aware of potential hazards or changes in traffic patterns ahead. The ego car may need to adjust its path to avoid the cone and maintain a safe passage.",
+            "box": [
+                84,
+                484,
+                35,
+                84
+            ],
+            "category_name": "traffic_cone"
+        },
+        "2": {
+            "description and explanation": "A blue traffic sign with a white pedestrian symbol, indicating a pedestrian crossing area. The ego car must be prepared to yield to pedestrians walking across the street, slowing down or stopping if necessary to ensure their safety.",
+            "box": [
+                186,
+                421,
+                40,
+                42
+            ],
+            "category_name": "traffic_sign"
+        },
+        "3": {
+            "description and explanation": "A temporary barrier, often used to block or redirect traffic. The ego car should recognize that a portion of the roadway ahead might be closed or restricted and prepare to follow an alternate route or merge into another lane in compliance with the road conditions.",
+            "box": [
+                747,
+                416,
+                13,
+                16
+            ],
+            "category_name": "barrier"
+        },
+        "4": {
+            "description and explanation": "A traffic cone, often orange with white horizontal striping, is a marker used on roadways to indicate areas where traffic must be altered. It typically warns of potential hazards ahead or instructs drivers to avoid a section of road due to construction or an accident. The presence of this cone suggests that the ego car should stay clear of the designated area, possibly requiring a lane change or reduced speed to ensure safety and compliance with roadwork or obstacle avoidance.",
+            "box": [
+                258,
+                450,
+                33,
+                66
+            ],
+            "category_name": "traffic_cone"
+        }
+    },
+    "driving_suggestion": "Proceed with caution, reducing speed if necessary as the vehicle approaches the crosswalk to allow for any pedestrians crossing. Be prepared to change lanes to the left if the current lane becomes obstructed by the stationary vehicles or the cyclist ahead. Maintain a safe distance from the traffic cones and prepare to stop if required for pedestrians."
+}

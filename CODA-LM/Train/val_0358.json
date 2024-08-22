@@ -1,0 +1,59 @@
+{
+    "general_perception": {
+        "vehicles": [
+            {
+                "description": "There is a bus on the right lane of the road ahead, moving in the same direction as the ego car.",
+                "explanation": "The bus may make stops and perform sudden deceleration, which requires the ego car to maintain a safe following distance and monitor the bus's indicators for any stop signals."
+            },
+            {
+                "description": "A sedan is visible ahead in the left lane, moving in the same direction as the ego car.",
+                "explanation": "The sedan's presence in the neighboring lane should be noted for lane changing considerations and potential lateral maneuvers."
+            }
+        ],
+        "vulnerable_road_users": [],
+        "traffic signs": [
+            {
+                "description": "There is a no-entry sign visible on the right, indicating the start of a one-way street or a closed lane.",
+                "explanation": "The no-entry sign informs the ego car that turning into that lane is prohibited, which could inform routing decisions."
+            }
+        ],
+        "traffic lights": [
+            {
+                "description": "A traffic light above the road is showing green.",
+                "explanation": "The green traffic light means the ego car can proceed but should remain cautious in case it changes to yellow soon."
+            }
+        ],
+        "traffic cones": [],
+        "barriers": [
+            {
+                "description": "Temporary yellow barriers are set up along the right side of the road, likely indicating construction or lane closures.",
+                "explanation": "These barriers guide the flow of traffic and restrict road width, necessitating vigilance to avoid accidental contact."
+            }
+        ],
+        "other objects": [],
+        "description and explanation": "The road scene includes several key elements that can impact driving behavior. There is a bus in the right lane ahead, moving in the same direction as the ego car, which may make stops and sudden decelerations. This requires maintaining a safe following distance and monitoring the bus's indicators for stop signals. Additionally, a sedan is visible in the left lane ahead, also moving in the same direction. The presence of the sedan should be noted for lane changing considerations and potential lateral maneuvers.\n\nA no-entry sign is present on the right, indicating a one-way street or closed lane. This sign informs the ego car that turning into that lane is prohibited, which could influence routing decisions. \n\nAbove the road, a traffic light shows green, signaling the ego car to proceed while remaining cautious in case the light changes to yellow soon.\n\nTemporary yellow barriers are set up along the right side of the road, likely indicating construction or lane closures. These barriers guide the flow of traffic and restrict road width, necessitating vigilance to avoid accidental contact."
+    },
+    "region_perception": {
+        "1": {
+            "description and explanation": "This item is a traffic signal displaying a green light, which typically signifies that vehicles facing the signal may proceed straight ahead or make turns unless such turns are prohibited by additional signage or road markings. The ego car should use this information to understand that it has the right of way to continue moving through the intersection.",
+            "box": [
+                406,
+                321,
+                94,
+                264
+            ],
+            "category_name": "traffic_sign"
+        },
+        "2": {
+            "description and explanation": "This object is a bus, a large vehicle designed to carry multiple passengers. In this context, it appears to be in a lane designated for buses, as indicated by the markings on the road and the sign visible on top of the bus. The ego car should maintain a safe distance and be aware that the bus may make stops to pick up or drop off passengers, which may require the ego car to adjust its speed or change lanes if attempting to pass.",
+            "box": [
+                766,
+                323,
+                96,
+                121
+            ],
+            "category_name": "bus"
+        }
+    },
+    "driving_suggestion": "Maintain a safe following distance behind the bus and be prepared for potential stops. Stay in the current lane as the green traffic light allows to proceed and the right lane is closed as indicated by the no-entry sign and barriers. Be ready for the left hand vehicle's actions and keep a safe lateral distance. Monitor the traffic light for any changes to yellow or red."
+}
