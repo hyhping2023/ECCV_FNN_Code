@@ -30,7 +30,7 @@ Rating 10 means that the object will definitely affect the ego car's safe drivin
 Rating 5 means that the object will probably affect the ego car's safe driving but the accident can be avoided.
 Rating 1 means that the object will not affect the ego car's driving.
 '''
-ObjectAnalyzeQuestion = "Please recognize and describe the object inside the green rectangle in the image in detail and explain why it affect ego car driving."
+ObjectAnalyzeQuestion = "Please recognize and describe the object inside the red rectangle in the image in detail and explain why it affect ego car driving."
 SpecificCarQuestion = 'Please analyze the type of the car in the image carefully and figure out whether there are anything special happened(like blaking light, etc.) in the car.'
 
 class CODALMTask:
@@ -110,7 +110,7 @@ class CODALMTask:
                         for data in annotations:
                             if '0'*(4-len(str(data['image_id']))) + str(data['image_id']) in image:
                                 img = cv2.imread(os.path.join('test/images',toImage(data['image_id'])))
-                                img = cv2.rectangle(img, (data['bbox'][0], data['bbox'][1]), (data['bbox'][0]+data['bbox'][2], data['bbox'][1]+data['bbox'][3]), (0, 255, 0), 2)
+                                img = cv2.rectangle(img, (data['bbox'][0], data['bbox'][1]), (data['bbox'][0]+data['bbox'][2], data['bbox'][1]+data['bbox'][3]), (0, 0, 255), 2)
                                 cv2.imwrite(os.path.join(save_dir, name(data['image_id'], idx)), img)
                                 with open(os.path.join(save_dir, name(data['image_id'], idx)).replace('.jpg', '.txt'), 'w') as f:
                                     f.write(categories[data['category_id']])
