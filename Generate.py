@@ -4,7 +4,6 @@ from openai import OpenAI
 import argparse
 import glob
 import json
-import threading
 from shutil import copyfile, move
 import cv2
 from tqdm import tqdm
@@ -126,7 +125,6 @@ class CODALMTask:
                     data = [json.loads(line) for line in f]
                 if not os.path.exists(PATH):
                     os.makedirs(PATH)
-                # os.remove(item for item in glob.glob(os.path.join(PATH, '*.jpg')))
                 for d in tqdm(data):
                     image = d['image']
                     CreateNewImages(image, PATH, categories)
@@ -154,6 +152,9 @@ class CODALMTask:
                         AnalyzeTask(file, question, 0.2)
 
         def SelfAssessment(files, temperature=0):
+            '''
+            This function is used to assess the significance of the object in the image.
+            '''
             def SelfAssessmentTask(file, question, temperature=0):
                 answer = self.openai_inference(file, question, temperature)
                 with open(file.replace('.jpg','_rank.txt'), 'w') as f:
@@ -186,6 +187,9 @@ class CODALMTask:
                     f.write(str(score))
 
         def GeneralInferenceTask(gp):
+            '''
+            It is used to integrate the results of SelfAssessment and GeneralPerception.
+            '''
             text = ''
             files = glob.glob(gp['image'].replace('.jpg', '*').replace('test/images', 'TestObjectAnalyzeImages'))
             for file in files:
@@ -193,7 +197,7 @@ class CODALMTask:
                     continue
                 with open(file.replace('.jpg', '_score.txt'), 'r') as f:
                     score = int(f.readline())
-                    if score >= 8:
+                    if score >= 8:  # To modift the threshold, you can change the number here.
                         print(file, 'hello')
                         with open (file.replace('.jpg', '.txt'), 'r') as f:
                             text += f.readline() + ':\n'
@@ -217,7 +221,6 @@ class CODALMTask:
         print('Analyze Every Object In CODA Done')
 
         SelfAssessmentImages = 'TestObjectAnalyzeImages'
-        OringialImages = 'test/images'
 
         SelfAssessmentfiles = glob.glob(os.path.join(SelfAssessmentImages, '*.jpg'))
         SelfAssessment(SelfAssessmentfiles)
@@ -237,6 +240,9 @@ class CODALMTask:
 
     def region_inference(self):
         def regionCategory():
+            '''
+            Get the category of the object from the CODA dataset. This method will modify the original files by adding category information.
+            '''
             categories = {}
             general_situation = {}
             with open('annotations.json', 'r') as f:
@@ -274,7 +280,7 @@ class CODALMTask:
                         json.dump(data, f)
                 print('Region Category Done')
         
-        # regionCategory()
+        regionCategory()
         with open('CODA-LM/Test/vqa_anno/region_perception.jsonl', 'r') as f:
             region_perception = [json.loads(line) for line in f]
             OriginalFiles = [line['image'] for line in region_perception]
@@ -355,10 +361,10 @@ class CODALMTask:
 
 
     def run(self):
-        self.general_inference()
-        print('General Inference Done')
         self.region_inference()
         print('Region Inference Done')
+        self.general_inference()
+        print('General Inference Done')
         self.driving_suggestions()
         print('Driving Suggestions Done')
         self.ValidateJsonlFile()
