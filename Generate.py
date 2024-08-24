@@ -28,7 +28,7 @@ You must rate the influence on a scale from 1 to 10 by strictly following this f
 Here is the rating rules.
 Rating 10 means that the object will definitely affect the ego car's safe driving, the situation is urgent to be taken into account and there is a large probability that the accident will happened.
 Rating 5 means that the object will probably affect the ego car's safe driving but the accident can be avoided.
-Rating 1 means that the object will not affect the ego car's driving.
+Rating 0 means that the object will not affect the ego car's driving.
 '''
 ObjectAnalyzeQuestion = "Please recognize and describe the object inside the red rectangle in the image in detail and explain why it affect ego car driving."
 SpecificCarQuestion = 'Please analyze the type of the car in the image carefully and figure out whether there are anything special happened(like blaking light, etc.) in the car.'

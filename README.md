@@ -1,8 +1,8 @@
-# From Regional Understanding to General Understanding: A Progressive Framework for Humanlike Comprehension of Corner Cases in Autonomous Driving Code Space
+# From Regional to General: A Progressive Framework for Human-Like Comprehension of Corner Cases in Autonomous Driving Code Space
 
 ## Original Files Structure
 
-This the original structure of our code after generation. **CODA-LM** is the original files in CODA-LM task (LINK: https://github.com/DLUT-LYZ/CODA-LM). The **test** stands for the images in the **CODA** which are required by **CODA-LM** (For details, please refer to the **CODA-LM** page). **annotations.json** is the annotations files in the **CODA** dataset (LINK: [CODA-Download (coda-dataset.github.io)](https://coda-dataset.github.io/download.html#instructions)). Before running, please run **pip install -r requirements.txt** and then **python Generate.py**.
+This the original structure of our code. **CODA-LM** is the original files in CODA-LM task (LINK: https://github.com/DLUT-LYZ/CODA-LM). The **test** stands for the images in the **CODA** which are required by **CODA-LM** (For details, please refer to the **CODA-LM** page). **annotations.json** is the annotations files in the **CODA** dataset (LINK: [CODA-Download (coda-dataset.github.io)](https://coda-dataset.github.io/download.html#instructions)). Before running, please run `pip install -r requirements.txt` and then `python Generate.py `.
 
 ```
 .
