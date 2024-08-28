@@ -374,7 +374,6 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--openai-key", required=True)
     parser.add_argument("--model",  required=True, type=str)
-    parser.add_argument("--debug-num", default=100, type=int, help="Only use for mode 1 & 2")
     parser.add_argument('--base-url', type=str)
     args = parser.parse_args()
     Application = CODALMTask(args)
