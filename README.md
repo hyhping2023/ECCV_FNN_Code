@@ -5,7 +5,7 @@
 This the original structure of our code. **CODA-LM** is the original files in CODA-LM task (LINK: https://github.com/DLUT-LYZ/CODA-LM). The **test** stands for the images in the **CODA** which are required by **CODA-LM** (For details, please refer to the **CODA-LM** page). **annotations.json** is the annotations files in the **CODA** dataset (LINK: [CODA-Download (coda-dataset.github.io)](https://coda-dataset.github.io/download.html#instructions)). Before running, please run 
 ```
 pip install -r requirements.txt
-python generate.py --openai-key [YOUR OPENAI KEY] --model [gpt-4o] (--base-url "if any")
+python Generate.py --openai-key [YOUR OPENAI KEY] --model [gpt-4o] (--base-url "if any")
 ```
 The original file structure:
 ```
